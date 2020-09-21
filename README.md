@@ -30,6 +30,24 @@ This system employs an already pre-trained BERT model, Bidirectional Encoder Rep
 
 ****
 
+## **Description of the notebooks**
+
+The execution of the notebooks should be performed in the following order:
+
+**1. Preprocessing_NER**
+
+**2. NER_by_CRF**
+
+**3. NER_by_BILSTM_CRF**
+
+**4. NER_by_BERT**
+
+**5. Create_ann_files**
+
+**6. Check_entity_match**
+
+****
+
 ## References
 
 [1] Soares, F., Villegas, M., Gonzalez-Agirre, A., Krallinger, M., & Armengol-Estapé, J. (2019, June). Medical word embeddings for Spanish: Development and evaluation. In Proceedings of the 2nd Clinical Natural Language Processing Workshop (pp. 124-133).
