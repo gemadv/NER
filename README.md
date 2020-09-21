@@ -32,19 +32,33 @@ This system employs an already pre-trained BERT model, Bidirectional Encoder Rep
 
 ## **Description of the notebooks**
 
+The development of this study has employed the datasets provided by Cantemist. [3] The collection of files employed include train, development 1, development 2, test and background, and test with gold standard files. 
+
 The execution of the notebooks should be performed in the following order:
 
 **1. Preprocessing_NER**
 
+The aim of this notebook is to read the text and annotation files regarding each dataset and perform some preprocessing steps to combine the information of the txt and ann files into a single dataframe. 
+
 **2. NER_by_CRF**
+
+The output of this notebook is the predictions of the test and background files stored in various arrays;"new_tokens_cc", "new_start_pos_cc" and "new_labels_cc". These arrays contain the necessary information to construct the annotations in BRAT format for every clinical case.
 
 **3. NER_by_BILSTM_CRF**
 
+The output of this notebook is the predictions of the test and background files stored in various arrays;"new_tokens_cc", "new_start_pos_cc" and "new_labels_cc". These arrays contain the necessary information to construct the annotations in BRAT format for every clinical case.
+
 **4. NER_by_BERT**
+
+The output of this notebook is the predictions of the test and background files stored in various arrays;"new_tokens_cc", "new_start_pos_cc" and "new_labels_cc". These arrays contain the necessary information to construct the annotations in BRAT format for every clinical case.
 
 **5. Create_ann_files**
 
+This notebook constructs the annotation files of the test and background dataset employing the predictions of the previous notebooks. Therefore, there is a single code regardless of the method. The only concern is to read the predictions of just one method at a time and execute the code to construct the annotations. Then, these annotations are stored in independent .ann files based on the clinical case. Therefore, considering just one method, for instance, NER_by CRF, the code will store as many .ann files as clinical cases.
+
 **6. Check_entity_match**
+
+The annotation files were constructed for a collection of files that included both test and background clinical cases. The true annotation files of this dataset were unknown However, the performance of the final models is just evaluated over the test files, for which the test with gold standards files were released later on. In order to identify which files in the test and background dataset matched the one in the test with gold standards, the file names were employed. 
 
 ****
 
@@ -53,3 +67,5 @@ The execution of the notebooks should be performed in the following order:
 [1] Soares, F., Villegas, M., Gonzalez-Agirre, A., Krallinger, M., & Armengol-Estapé, J. (2019, June). Medical word embeddings for Spanish: Development and evaluation. In Proceedings of the 2nd Clinical Natural Language Processing Workshop (pp. 124-133).
 
 [2] DEVLIN, Jacob, et al. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805, 2018
+
+[3] A. Miranda-Escalada, E. Farré, M. Krallinger, Named entity recognition, concept normal- ization and clinical coding: Overview of the cantemist track for cancer text mining in spanish, corpus, guidelines, methods and results, in: Proceedings of the Iberian Languages Evaluation Forum (IberLEF 2020), CEUR Workshop Proceedings, 2020.
