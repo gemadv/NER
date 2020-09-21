@@ -25,9 +25,10 @@ This approach also consists on implementing a bidirectional LSTM (Long Short-Ter
 This approach also consists on implementing a bidirectional LSTM (Long Short-Term Memory) network followed by a Conditional Random Field. Similarly as in 3-systemBILSTM2, it implements the Scielo + Wikipedia health cased skip-gram model [1] as a pre-trained word embedding to construct the feature representation. However, this system also employs character embedding concatenated with the word embedding, as an input. 
 
 **3-BERT**
+
 This system employs an already pre-trained BERT model, Bidirectional Encoder Representations from Transformers, proposed by Jacob Devlin, Ming-Wei Chang, Kenton Lee and Kristina Toutanova. [2] Given the fact that this task involves working with clinical cases in Spanish, the multilingual cased version of BERT has been used. This strategy allows to consider information from both directions without the need to employ two independent LSTMs, as in the previous systems. 
 
-**
+****
 
 ## References
 
