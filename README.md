@@ -34,6 +34,8 @@ This system employs an already pre-trained BERT model, Bidirectional Encoder Rep
 
 The development of this study has employed the datasets provided by Cantemist. [3] The collection of files employed include train, development 1, development 2, test and background, and test with gold standard files. 
 
+The datasets were obtained from: https://zenodo.org/record/3978041#.X29UM5MzY0o
+
 The execution of the notebooks should be performed in the following order:
 
 **1. Preprocessing_NER**
